@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi tienda de suplementos</title>
+  <meta charset="UTF-8" />
+  <title>Suplementos Geba</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('geba.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(100%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    #logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenido a mi tienda de suplementos</h1>
-  <p>Aquí vas a encontrar proteína, creatina, aminoácidos y más.</p>
+  <!-- Este logo se mostrará si subiste logo.png -->
+  <img id="logo" src="logo.png" alt="Logo Suplementos Geba" />
+  <h1>Bienvenido a Suplementos Geba</h1>
+  <p>Proteína, creatina, aminoácidos y más.</p>
 </body>
 </html>
