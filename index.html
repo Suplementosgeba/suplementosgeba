@@ -6,36 +6,64 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-image: url('geba.jpg'); /* Esto es el fondo de la página */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      filter: grayscale(100%);
-      color: white;
       font-family: Arial, sans-serif;
-      text-shadow: 2px 2px 4px black;
+      background-color: #111;
+      color: white;
+      text-align: center;
     }
 
     #logo {
-      width: 150px; /* Ajusta el tamaño del logo como quieras */
-      margin-bottom: 30px;
+      width: 200px;
+      margin: 30px auto 10px;
+      display: block;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p.descripcion {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      font-style: italic;
+      color: #ddd;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: auto;
+      filter: grayscale(100%);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
     }
   </style>
 </head>
 <body>
-  <!-- Asegúrate de que el logo se llame logo.png y esté en el repositorio -->
-  <img id="logo" src="logo.png" alt="Logo Suplementos Geba" />
-  <h1>Bienvenido a Suplementos Geba</h1>
-  <p>Proteína, creatina, aminoácidos y más.</p>
-</body>
-</html>
+  <img id="logo" src="geba.jpg" alt="Logo Suplementos Geba" />
+  <h1>Suplementos para todos los deportes</h1>
+  <p class="descripcion">Suplementos de alta calidad para potenciar tu rendimiento y alcanzar tus metas deportivas.</p>
+
+  <div class="galeria">
+    <img src="rugby.jpg" alt="Rugby" />
+    <img src="gym.jpg" alt="Gimnasio" />
+    <img src="hockey.jpg" alt="Hockey" />
+    <img src="futbol.jpg" alt="Fútbol" />
+    <img src="basquet.1.jpg" alt="Básquet" />
+    <img src="running1.jpg" alt="Running" />
+    <img src="hockey1.jpg" alt="Hockey 2" />
+    <i
