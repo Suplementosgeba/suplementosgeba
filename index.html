@@ -33,13 +33,39 @@
     .galeria {
       max-width: 960px;
       margin: 0 auto 40px;
+      overflow: hidden; /* Oculta las partes que salen */
     }
 
+    /* Estilos para filas con movimiento */
     .fila {
       display: flex;
-      justify-content: center;
       gap: 20px;
-      margin-bottom: 20px;
+      /* Anima el movimiento hacia la izquierda */
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-name: moverFila;
+    }
+
+    /* Animaciones con diferente duración para cada fila */
+    .fila1 {
+      animation-duration: 25s;
+    }
+
+    .fila2 {
+      animation-duration: 35s;
+    }
+
+    .fila3 {
+      animation-duration: 30s;
+    }
+
+    @keyframes moverFila {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .cuadrada {
@@ -50,6 +76,7 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
       transition: transform 0.3s, filter 0.3s;
+      flex-shrink: 0; /* Que no se achique */
     }
 
     .vertical {
@@ -60,6 +87,7 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
       transition: transform 0.3s, filter 0.3s;
+      flex-shrink: 0;
     }
 
     .cuadrada:hover, .vertical:hover {
@@ -75,21 +103,33 @@
 
   <div class="galeria">
     <!-- Fila 1 -->
-    <div class="fila">
+    <div class="fila fila1">
+      <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
+      <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
+      <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
+      <!-- Repetición para animación continua -->
       <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
       <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
       <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
     </div>
 
-    <!-- Fila 2 (actualizada a 3 imágenes verticales) -->
-    <div class="fila">
+    <!-- Fila 2 -->
+    <div class="fila fila2">
+      <img class="vertical" src="running3.jpg" alt="Running 3" />
+      <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
+      <img class="vertical" src="gym.jpg" alt="Gimnasio" />
+      <!-- Repetición para animación continua -->
       <img class="vertical" src="running3.jpg" alt="Running 3" />
       <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
       <img class="vertical" src="gym.jpg" alt="Gimnasio" />
     </div>
 
     <!-- Fila 3 -->
-    <div class="fila">
+    <div class="fila fila3">
+      <img class="cuadrada" src="hockey1.jpg" alt="Hockey 1" />
+      <img class="cuadrada" src="rugby1.jpg" alt="Rugby 1" />
+      <img class="cuadrada" src="running1.jpg" alt="Running 1" />
+      <!-- Repetición para animación continua -->
       <img class="cuadrada" src="hockey1.jpg" alt="Hockey 1" />
       <img class="cuadrada" src="rugby1.jpg" alt="Rugby 1" />
       <img class="cuadrada" src="running1.jpg" alt="Running 1" />
