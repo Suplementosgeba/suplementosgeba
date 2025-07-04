@@ -4,11 +4,6 @@
   <meta charset="UTF-8" />
   <title>Suplementos Geba</title>
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -17,33 +12,9 @@
       text-align: center;
     }
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #000;
-      padding: 10px 0;
-      z-index: 1000;
-      border-bottom: 1px solid #333;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
-    }
-
-    /* Logo y título */
     #logo {
       width: 200px;
-      margin: 80px auto 10px;
+      margin: 30px auto 10px;
       display: block;
     }
 
@@ -59,10 +30,9 @@
       color: #ddd;
     }
 
-    /* Galería */
     .galeria {
       max-width: 960px;
-      margin: 0 auto 60px;
+      margin: 0 auto 40px;
     }
 
     .fila {
@@ -70,6 +40,8 @@
       justify-content: center;
       gap: 20px;
       margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
     }
 
     .cuadrada {
@@ -97,110 +69,86 @@
       filter: grayscale(0%);
     }
 
-    /* Secciones */
-    section {
-      padding: 60px 20px;
+    /* Animación de movimiento para las filas */
+    .fila.animate {
+      animation: moverIzquierda 40s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes moverIzquierda {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Estilo sección Quienes Somos */
+    #quienes-somos {
       max-width: 800px;
-      margin: auto;
+      margin: 40px auto;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      padding: 0 20px;
+      text-align: left;
     }
 
-    section h2 {
-      font-size: 1.8em;
+    #quienes-somos h2 {
+      color: #f0c14b;
+      text-align: center;
+      font-size: 2.5em;
       margin-bottom: 20px;
-      color: #ffcc00;
     }
 
-    /* Animación */
-    .fila2 {
-      animation: moverFila 20s linear infinite;
-    }
-
-    @keyframes moverFila {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .fila3 {
-      animation: moverFilaReversa 18s linear infinite;
-    }
-
-    @keyframes moverFilaReversa {
-      0% {
-        transform: translateX(-50%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    /* Espaciado extra para que no tape el menú */
-    .espacio-arriba {
-      padding-top: 60px;
+    #quienes-somos p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      text-align: justify;
     }
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#productos">Productos</a>
-    <a href="#quienes">Quiénes somos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <!-- Logo e intro -->
   <img id="logo" src="geba.jpg" alt="Logo Suplementos Geba" />
   <h1>GEBA SUPLEMENTOS</h1>
   <p class="descripcion">Suplementos de alta calidad para potenciar tu rendimiento y alcanzar tus metas deportivas.</p>
 
-  <!-- GALERÍA -->
-  <div class="galeria espacio-arriba">
+  <div class="galeria">
     <!-- Fila 1 -->
-    <div class="fila fila1">
+    <div class="fila animate">
       <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
       <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
       <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
     </div>
 
-    <!-- Fila 2 -->
-    <div class="fila fila2">
+    <!-- Fila 2 (actualizada a 4 imágenes verticales) -->
+    <div class="fila animate">
       <img class="vertical" src="running3.jpg" alt="Running 3" />
-      <img class="vertical" src="box1.jpg" alt="Boxeo" />
-      <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
-      <img class="vertical" src="gym.jpg" alt="Gimnasio" />
-      <img class="vertical" src="running3.jpg" alt="Running 3" />
-      <img class="vertical" src="box1.jpg" alt="Boxeo" />
+      <img class="vertical" src="box1.jpg" alt="Box" />
       <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
       <img class="vertical" src="gym.jpg" alt="Gimnasio" />
     </div>
 
     <!-- Fila 3 -->
-    <div class="fila fila3">
+    <div class="fila animate">
       <img class="cuadrada" src="hockey1.jpg" alt="Hockey 1" />
       <img class="cuadrada" src="rugby1.jpg" alt="Rugby 1" />
       <img class="cuadrada" src="running1.jpg" alt="Running 1" />
     </div>
   </div>
 
-  <!-- SECCIONES -->
-  <section id="productos">
-    <h2>Productos</h2>
-    <p>Muy pronto vas a poder ver todos los suplementos disponibles, con descripciones claras y precios accesibles.</p>
+  <section id="quienes-somos">
+    <h2>Quiénes Somos</h2>
+    <p>
+      Somos Luna y Augusto, una pareja que decidió unir sus sueños y pasiones para construir algo más grande juntos. Luna, estudiante de la Licenciatura en Nutrición, y Augusto, jugador de básquet. Si bien recién estamos iniciando nuestros caminos profesionales, tenemos una gran motivación: ayudar a quienes, como nosotros, buscan superarse día a día.
+    </p>
+    <p>
+      Así nació GEBA Suplementos, la perfecta unión entre nutrición y deporte, dos fuerzas que nos apasionan y que creemos que pueden transformar vidas. Cada producto que ofrecemos lleva nuestra dedicación y compromiso, porque sabemos lo que significa entrenar con ganas, cuidarse con intención y querer alcanzar el máximo rendimiento.
+    </p>
+    <p>
+      Este proyecto es más que un emprendimiento; es nuestra forma de aportar salud, energía y fuerza para que cada persona pueda alcanzar sus metas deportivas y personales con entusiasmo y confianza.
+    </p>
   </section>
-
-  <section id="quienes">
-    <h2>Quiénes somos</h2>
-    <p>Suplementos Geba nace con el objetivo de acompañar el crecimiento deportivo de todos los atletas del club. Calidad, confianza y pasión por lo que hacemos.</p>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Querés hacer un pedido o tenés alguna duda? Escribinos por Instagram o WhatsApp. ¡Gracias por confiar en nosotros!</p>
-  </section>
-
 </body>
 </html>
