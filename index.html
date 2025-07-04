@@ -63,9 +63,35 @@
     .fila {
       display: flex;
       gap: 20px;
-      animation: mover 30s linear infinite;
       padding: 10px 0;
       justify-content: center;
+    }
+
+    .fila.fila1 {
+      animation: mover1 40s linear infinite;
+    }
+
+    .fila.fila2 {
+      animation: mover2 60s linear infinite;
+    }
+
+    .fila.fila3 {
+      animation: mover3 50s linear infinite;
+    }
+
+    @keyframes mover1 {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes mover2 {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes mover3 {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     .cuadrada {
@@ -91,11 +117,6 @@
     .cuadrada:hover, .vertical:hover {
       transform: scale(1.05);
       filter: grayscale(0%);
-    }
-
-    @keyframes mover {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
     }
 
     section {
@@ -131,58 +152,9 @@
   <!-- Galería animada -->
   <div class="galeria">
     <!-- Fila 1 -->
-    <div class="fila">
+    <div class="fila fila1">
       <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
       <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
       <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
-    </div>
-
-    <!-- Fila 2 -->
-    <div class="fila">
-      <img class="vertical" src="running3.jpg" alt="Running 3" />
-      <img class="vertical" src="box1.jpg" alt="Boxeo" />
-      <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
-      <img class="vertical" src="gym.jpg" alt="Gimnasio" />
-    </div>
-
-    <!-- Fila 3 -->
-    <div class="fila">
-      <img class="cuadrada" src="hockey1.jpg" alt="Hockey 1" />
-      <img class="cuadrada" src="rugby1.jpg" alt="Rugby 1" />
-      <img class="cuadrada" src="running1.jpg" alt="Running 1" />
-    </div>
-  </div>
-
-  <!-- Sección Productos -->
-  <section id="productos">
-    <h2>Productos</h2>
-    <p>Próximamente vas a poder ver todos nuestros suplementos disponibles.</p>
-  </section>
-
-  <!-- Sección Quiénes Somos -->
-  <section id="quienes">
-    <h2>Quiénes Somos</h2>
-    <p>
-      Somos Luna y Augusto, una pareja que decidió unir sus sueños y pasiones para construir algo más grande juntos.
-      Luna, estudiante de la Licenciatura en Nutrición, y Augusto, jugador de básquet.
-      Si bien recién estamos iniciando nuestros caminos profesionales, tenemos una gran motivación:
-      ayudar a quienes, como nosotros, buscan superarse día a día.
-    </p>
-    <p>
-      Así nació GEBA Suplementos, la perfecta unión entre nutrición y deporte, dos fuerzas que nos apasionan
-      y que creemos que pueden transformar vidas. Cada producto que ofrecemos lleva nuestra dedicación y compromiso,
-      porque sabemos lo que significa entrenar con ganas, cuidarse con intención y querer alcanzar el máximo rendimiento.
-    </p>
-    <p>
-      Este proyecto es más que un emprendimiento; es nuestra forma de aportar salud, energía y fuerza
-      para que cada persona pueda alcanzar sus metas deportivas y personales con entusiasmo y confianza.
-    </p>
-  </section>
-
-  <!-- Sección Contacto -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Querés hacer un pedido o tenés alguna duda? Escribinos por Instagram o WhatsApp. ¡Gracias por confiar en nosotros!</p>
-  </section>
-</body>
-</html>
+      <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
+      <img class="cuadrada" src="
