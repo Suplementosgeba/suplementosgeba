@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Suplementos Geba</title>
   <style>
-    /* Estilos generales */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -13,12 +12,12 @@
       scroll-behavior: smooth;
     }
 
-    /* Menú fijo arriba */
+    /* Menú fijo */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #bfa041; /* dorado */
+      background-color: #bfa041;
       display: flex;
       justify-content: center;
       gap: 50px;
@@ -39,7 +38,6 @@
       color: #fff;
     }
 
-    /* Contenido principal con padding para que no quede oculto detrás del menú */
     main {
       padding-top: 80px;
       text-align: center;
@@ -52,41 +50,10 @@
       display: block;
     }
 
-    /* Títulos y descripciones */
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    p.descripcion {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-      font-style: italic;
-      color: #ddd;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Secciones */
-    section {
-      max-width: 960px;
-      margin: 60px auto;
-      padding: 0 15px;
-      text-align: left;
-    }
-
-    section h2 {
-      color: #bfa041;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #bfa041;
-      padding-bottom: 5px;
-    }
-
-    /* Galería con filas animadas */
+    /* Galería */
     .galeria {
       max-width: 960px;
-      margin: 0 auto 40px;
+      margin: 0 auto 60px;
       overflow: hidden;
     }
 
@@ -98,18 +65,11 @@
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      /* velocidad personalizada en cada fila */
     }
 
-    .fila1 {
-      animation-duration: 40s;
-    }
-    .fila2 {
-      animation-duration: 30s;
-    }
-    .fila3 {
-      animation-duration: 45s;
-    }
+    .fila1 { animation-duration: 40s; }
+    .fila2 { animation-duration: 30s; }
+    .fila3 { animation-duration: 45s; }
 
     @keyframes moverIzquierda {
       0% { transform: translateX(0); }
@@ -143,19 +103,31 @@
       filter: grayscale(0%);
     }
 
-    /* Texto en contacto */
-    #contacto p {
-      font-size: 1.2em;
-      color: #ddd;
-      max-width: 600px;
-      margin: 0 auto;
-      font-style: italic;
+    /* Secciones */
+    section {
+      max-width: 960px;
+      margin: 60px auto;
+      padding: 0 15px;
+      text-align: left;
     }
 
+    section h2 {
+      color: #bfa041;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #bfa041;
+      padding-bottom: 5px;
+    }
+
+    p.descripcion, section p {
+      font-size: 1.1em;
+      color: #ddd;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Menú -->
   <nav>
     <a href="#productos">Productos</a>
     <a href="#quienes-somos">Quiénes Somos</a>
@@ -163,8 +135,10 @@
   </nav>
 
   <main>
+    <!-- Logo -->
     <img id="logo" src="geba.jpg" alt="Logo Suplementos Geba" />
 
+    <!-- Galería -->
     <div class="galeria">
       <!-- Fila 1 -->
       <div class="fila fila1">
@@ -189,29 +163,26 @@
       </div>
     </div>
 
+    <!-- Sección Productos -->
     <section id="productos">
       <h2>Productos</h2>
-      <p class="descripcion">Aquí encontrarás suplementos de alta calidad para potenciar tu rendimiento y alcanzar tus metas deportivas.</p>
+      <p class="descripcion">Muy pronto vas a poder ver todos nuestros productos disponibles acá.</p>
     </section>
 
+    <!-- Sección Quiénes Somos -->
     <section id="quienes-somos">
       <h2>Quiénes Somos</h2>
-      <p>
-        Somos Luna y Augusto, una pareja que decidió unir sus sueños y pasiones para construir algo más grande juntos. Luna, estudiante de la Licenciatura en Nutrición, y Augusto, jugador de básquet. Si bien recién estamos iniciando nuestros caminos profesionales, tenemos una gran motivación: ayudar a quienes, como nosotros, buscan superarse día a día.
-      </p>
-      <p>
-        Así nació GEBA Suplementos, la perfecta unión entre nutrición y deporte, dos fuerzas que nos apasionan y que creemos que pueden transformar vidas. Cada producto que ofrecemos lleva nuestra dedicación y compromiso, porque sabemos lo que significa entrenar con ganas, cuidarse con intención y querer alcanzar el máximo rendimiento.
-      </p>
-      <p>
-        Este proyecto es más que un emprendimiento; es nuestra forma de aportar salud, energía y fuerza para que cada persona pueda alcanzar sus metas deportivas y personales con entusiasmo y confianza.
-      </p>
+      <p>Somos Luna y Augusto, una pareja que decidió unir sus sueños y pasiones para construir algo más grande juntos. Luna, estudiante de la Licenciatura en Nutrición, y Augusto, jugador de básquet. Si bien recién estamos iniciando nuestros caminos profesionales, tenemos una gran motivación: ayudar a quienes, como nosotros, buscan superarse día a día.</p>
+      <p>Así nació GEBA Suplementos, la perfecta unión entre nutrición y deporte, dos fuerzas que nos apasionan y que creemos que pueden transformar vidas. Cada producto que ofrecemos lleva nuestra dedicación y compromiso, porque sabemos lo que significa entrenar con ganas, cuidarse con intención y querer alcanzar el máximo rendimiento.</p>
+      <p>Este proyecto es más que un emprendimiento; es nuestra forma de aportar salud, energía y fuerza para que cada persona pueda alcanzar sus metas deportivas y personales con entusiasmo y confianza.</p>
     </section>
 
+    <!-- Sección Contacto -->
     <section id="contacto">
       <h2>Contacto</h2>
       <p>¿Querés hacer un pedido o tenés alguna duda? Escribinos por Instagram o WhatsApp. ¡Gracias por confiar en nosotros!</p>
     </section>
-  </main>
 
+  </main>
 </body>
 </html>
