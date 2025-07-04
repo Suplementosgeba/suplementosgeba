@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Suplementos Geba</title>
   <style>
-    * {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
-      text-align: center;
+      scroll-behavior: smooth;
     }
 
-    /* Menú fijo */
     header {
       position: fixed;
       top: 0;
@@ -24,120 +19,90 @@
       background-color: #000;
       padding: 15px 0;
       z-index: 1000;
+      text-align: center;
     }
-
     nav a {
       margin: 0 20px;
-      text-decoration: none;
       color: #ffd700;
+      text-decoration: none;
       font-weight: bold;
       font-size: 18px;
     }
 
-    /* Logo */
     #logo {
       width: 200px;
-      margin: 100px auto 30px;
       display: block;
+      margin: 100px auto 30px;
     }
 
-    h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    p.descripcion {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-      font-style: italic;
-      color: #ddd;
-    }
-
-    /* Galería */
     .galeria {
-      max-width: 100%;
       overflow: hidden;
-      margin-bottom: 50px;
+      max-width: 100%;
+      margin: 0 auto 50px;
     }
-
     .fila {
       display: flex;
       gap: 20px;
-      padding: 10px 0;
-      justify-content: center;
     }
+    .fila1 { animation: mover 40s linear infinite; }
+    .fila2 { animation: mover 60s linear infinite; }
+    .fila3 { animation: mover 50s linear infinite; }
 
-    .fila.fila1 {
-      animation: mover1 40s linear infinite;
-    }
-
-    .fila.fila2 {
-      animation: mover2 60s linear infinite;
-    }
-
-    .fila.fila3 {
-      animation: mover3 50s linear infinite;
-    }
-
-    @keyframes mover1 {
+    @keyframes mover {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
-    @keyframes mover2 {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    img {
+      user-select: none;
     }
-
-    @keyframes mover3 {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
     .cuadrada {
       width: 250px;
       height: 250px;
       object-fit: cover;
       filter: grayscale(100%);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-      transition: transform 0.3s, filter 0.3s;
+      transition: transform .3s, filter .3s;
     }
-
     .vertical {
       width: 180px;
       height: 300px;
       object-fit: cover;
       filter: grayscale(100%);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-      transition: transform 0.3s, filter 0.3s;
+      transition: transform .3s, filter .3s;
     }
-
     .cuadrada:hover, .vertical:hover {
       transform: scale(1.05);
       filter: grayscale(0%);
     }
 
     section {
-      padding: 60px 20px;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: left;
     }
-
     h2 {
       color: #ffd700;
-      font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 5px;
+    }
+    section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ddd;
     }
 
     #contacto p {
-      font-size: 18px;
-      line-height: 1.6;
+      font-style: italic;
     }
+
   </style>
 </head>
 <body>
+
   <header>
     <nav>
       <a href="#productos">Productos</a>
@@ -146,15 +111,53 @@
     </nav>
   </header>
 
-  <!-- Logo -->
-  <img id="logo" src="geba.jpg" alt="Logo Suplementos Geba" />
+  <main>
+    <img id="logo" src="geba.jpg" alt="Logo GEBA Suplementos">
 
-  <!-- Galería animada -->
-  <div class="galeria">
-    <!-- Fila 1 -->
-    <div class="fila fila1">
-      <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
-      <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
-      <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
-      <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
-      <img class="cuadrada" src="
+    <div class="galeria">
+      <div class="fila fila1">
+        <img class="cuadrada" src="basquet2.jpg">
+        <img class="cuadrada" src="futbol.jpg">
+        <img class="cuadrada" src="hockey.jpg">
+        <img class="cuadrada" src="basquet2.jpg">
+        <img class="cuadrada" src="futbol.jpg">
+        <img class="cuadrada" src="hockey.jpg">
+      </div>
+      <div class="fila fila2">
+        <img class="vertical" src="running3.jpg">
+        <img class="vertical" src="box1.jpg">
+        <img class="vertical" src="basquet1.jpg">
+        <img class="vertical" src="gym.jpg">
+        <img class="vertical" src="running3.jpg">
+        <img class="vertical" src="box1.jpg">
+      </div>
+      <div class="fila fila3">
+        <img class="cuadrada" src="hockey1.jpg">
+        <img class="cuadrada" src="rugby1.jpg">
+        <img class="cuadrada" src="running1.jpg">
+        <img class="cuadrada" src="hockey1.jpg">
+        <img class="cuadrada" src="rugby1.jpg">
+        <img class="cuadrada" src="running1.jpg">
+      </div>
+    </div>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <p>Próximamente vas a poder ver todos nuestros suplementos disponibles.</p>
+    </section>
+
+    <section id="quienes">
+      <h2>Quiénes Somos</h2>
+      <p>Somos Luna y Augusto, una pareja que decidió unir sus sueños y pasiones para construir algo más grande juntos. Luna, estudiante de la Licenciatura en Nutrición, y Augusto, jugador de básquet. Si bien recién estamos iniciando nuestros caminos profesionales, tenemos una gran motivación: ayudar a quienes, como nosotros, buscan superarse día a día.</p>
+      <p>Así nació GEBA Suplementos, la perfecta unión entre nutrición y deporte, dos fuerzas que nos apasionan y que creemos que pueden transformar vidas. Cada producto que ofrecemos lleva nuestra dedicación y compromiso, porque sabemos lo que significa entrenar con ganas, cuidarse con intención y querer alcanzar el máximo rendimiento.</p>
+      <p>Este proyecto es más que un emprendimiento; es nuestra forma de aportar salud, energía y fuerza para que cada persona pueda alcanzar sus metas deportivas y personales con entusiasmo y confianza.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Querés hacer un pedido o tenés alguna duda? Escribinos por Instagram o WhatsApp. ¡Gracias por confiar en nosotros!</p>
+    </section>
+  </main>
+
+</body>
+</html>
