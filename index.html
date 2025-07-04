@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <title>Suplementos Geba</title>
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -12,9 +17,33 @@
       text-align: center;
     }
 
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 10px 0;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Logo y título */
     #logo {
       width: 200px;
-      margin: 30px auto 10px;
+      margin: 80px auto 10px;
       display: block;
     }
 
@@ -30,33 +59,60 @@
       color: #ddd;
     }
 
+    /* Galería */
     .galeria {
       max-width: 960px;
-      margin: 0 auto 40px;
-      overflow: hidden; /* Oculta las partes que salen */
+      margin: 0 auto 60px;
     }
 
-    /* Estilos para filas con movimiento */
     .fila {
       display: flex;
+      justify-content: center;
       gap: 20px;
-      /* Anima el movimiento hacia la izquierda */
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-name: moverFila;
+      margin-bottom: 20px;
     }
 
-    /* Animaciones con diferente duración para cada fila */
-    .fila1 {
-      animation-duration: 15s;
+    .cuadrada {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s, filter 0.3s;
     }
 
+    .vertical {
+      width: 180px;
+      height: 300px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .cuadrada:hover, .vertical:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    /* Secciones */
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    /* Animación */
     .fila2 {
-      animation-duration: 20s;
-    }
-
-    .fila3 {
-      animation-duration: 18s;
+      animation: moverFila 20s linear infinite;
     }
 
     @keyframes moverFila {
@@ -68,75 +124,83 @@
       }
     }
 
-    .cuadrada {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      filter: grayscale(100%);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-      transition: transform 0.3s, filter 0.3s;
-      flex-shrink: 0; /* Que no se achique */
+    .fila3 {
+      animation: moverFilaReversa 18s linear infinite;
     }
 
-    .vertical {
-      width: 180px;
-      height: 300px;
-      object-fit: cover;
-      filter: grayscale(100%);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-      transition: transform 0.3s, filter 0.3s;
-      flex-shrink: 0;
+    @keyframes moverFilaReversa {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
 
-    .cuadrada:hover, .vertical:hover {
-      transform: scale(1.05);
-      filter: grayscale(0%);
+    /* Espaciado extra para que no tape el menú */
+    .espacio-arriba {
+      padding-top: 60px;
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="#quienes">Quiénes somos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Logo e intro -->
   <img id="logo" src="geba.jpg" alt="Logo Suplementos Geba" />
   <h1>GEBA SUPLEMENTOS</h1>
   <p class="descripcion">Suplementos de alta calidad para potenciar tu rendimiento y alcanzar tus metas deportivas.</p>
 
-  <div class="galeria">
+  <!-- GALERÍA -->
+  <div class="galeria espacio-arriba">
     <!-- Fila 1 -->
     <div class="fila fila1">
       <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
       <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
       <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
-      <!-- Repetición para animación continua -->
-      <img class="cuadrada" src="basquet2.jpg" alt="Básquet 2" />
-      <img class="cuadrada" src="futbol.jpg" alt="Fútbol" />
-      <img class="cuadrada" src="hockey.jpg" alt="Hockey" />
     </div>
 
-<!-- Fila 2 (actualizada a 4 imágenes verticales) -->
-<div class="fila fila2">
-  <img class="vertical" src="running3.jpg" alt="Running 3" />
-  <img class="vertical" src="box1.jpg" alt="Boxeo" />
-  <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
-  <img class="vertical" src="gym.jpg" alt="Gimnasio" />
-  <!-- Repetición para animación -->
-  <img class="vertical" src="running3.jpg" alt="Running 3" />
-  <img class="vertical" src="box1.jpg" alt="Boxeo" />
-  <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
-  <img class="vertical" src="gym.jpg" alt="Gimnasio" />
-</div>
-
+    <!-- Fila 2 -->
+    <div class="fila fila2">
+      <img class="vertical" src="running3.jpg" alt="Running 3" />
+      <img class="vertical" src="box1.jpg" alt="Boxeo" />
+      <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
+      <img class="vertical" src="gym.jpg" alt="Gimnasio" />
+      <img class="vertical" src="running3.jpg" alt="Running 3" />
+      <img class="vertical" src="box1.jpg" alt="Boxeo" />
+      <img class="vertical" src="basquet1.jpg" alt="Básquet 1" />
+      <img class="vertical" src="gym.jpg" alt="Gimnasio" />
+    </div>
 
     <!-- Fila 3 -->
     <div class="fila fila3">
       <img class="cuadrada" src="hockey1.jpg" alt="Hockey 1" />
       <img class="cuadrada" src="rugby1.jpg" alt="Rugby 1" />
       <img class="cuadrada" src="running1.jpg" alt="Running 1" />
-      <!-- Repetición para animación continua -->
-      <img class="cuadrada" src="hockey1.jpg" alt="Hockey 1" />
-      <img class="cuadrada" src="rugby1.jpg" alt="Rugby 1" />
-      <img class="cuadrada" src="running1.jpg" alt="Running 1" />
     </div>
   </div>
+
+  <!-- SECCIONES -->
+  <section id="productos">
+    <h2>Productos</h2>
+    <p>Muy pronto vas a poder ver todos los suplementos disponibles, con descripciones claras y precios accesibles.</p>
+  </section>
+
+  <section id="quienes">
+    <h2>Quiénes somos</h2>
+    <p>Suplementos Geba nace con el objetivo de acompañar el crecimiento deportivo de todos los atletas del club. Calidad, confianza y pasión por lo que hacemos.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés hacer un pedido o tenés alguna duda? Escribinos por Instagram o WhatsApp. ¡Gracias por confiar en nosotros!</p>
+  </section>
+
 </body>
 </html>
