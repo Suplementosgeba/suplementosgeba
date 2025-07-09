@@ -172,11 +172,11 @@
     </div>
   </div>
 
-  <!-- Sección Productos -->
+ <!-- Sección Productos -->
 <section id="productos" style="max-width: 900px; margin: 0 auto; padding: 60px 20px;">
   <h2 style="color: #ffd700; font-size: 28px; margin-bottom: 20px;">Productos</h2>
+  
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-
     <!-- Producto 1 -->
     <div style="width: 220px; cursor: pointer; text-align: center;" onclick="abrirModal('modalProtsn')">
       <img src="Protsn.png" alt="Whey Protein Star Nutrition" style="width: 100%; border-radius: 8px; box-shadow: 0 0 8px #ffd700;" />
@@ -184,22 +184,22 @@
       <p style="color: white; font-weight: bold; font-size: 20px;">$37,799</p>
     </div>
 
+    <!-- Producto 2 -->
+    <div style="width: 220px; cursor: pointer; text-align: center;" onclick="abrirModal('modalProtena')">
+      <img src="Protena.png" alt="TrueMade Whey Protein ENA Sabor Chocolate" style="width: 100%; border-radius: 8px; box-shadow: 0 0 8px #ffd700;" />
+      <h3 style="color: #ffd700; margin: 10px 0 4px; font-size: 20px;">TrueMade Whey Protein ENA Sabor Chocolate</h3>
+      <p style="color: white; font-weight: bold; font-size: 20px;">$39,799</p>
+    </div>
   </div>
 </section>
 
-<!-- Modal del Producto 1 -->
+<!-- Modal Producto 1 -->
 <div id="modalProtsn" class="modal" style="display:none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
   <div style="background-color: #111; margin: 60px auto; padding: 20px; border-radius: 12px; max-width: 700px; color: white; position: relative;">
     <span onclick="cerrarModal('modalProtsn')" style="color: #ffd700; position: absolute; top: 15px; right: 25px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
-    
-    <!-- Título y precio -->
     <h2 style="color: #ffd700; margin-bottom: 5px;">Whey Protein Star Nutrition Doypack 908g</h2>
     <p style="color: white; font-weight: bold; font-size: 20px; margin-top: 0; margin-bottom: 15px;">$37,799</p>
-    
-    <!-- Imagen principal -->
     <img src="Protsn.png" alt="Whey Protein Star Nutrition" style="width: 100%; border-radius: 10px; margin-bottom: 15px;" />
-    
-    <!-- Descripción y demás -->
     <div style="text-align: left;">
       <p><strong>Descripción:</strong><br />Sabor vainilla o chocolate. Compuesta por ultra concentrado, aislado e hidrolizado de suero de máxima pureza, obtenidos por métodos no agresivos que garantizan la calidad y estabilidad del producto.
       Su agradable sabor y alta disolución lo convierten en la opción inteligente a la hora de agregar proteínas de alto valor biológico a nuestra dieta, o como parte de un programa nutricional deportivo.
@@ -213,12 +213,45 @@
       *El sabor chocolate suizo y cookies and cream tienen cacao.
       CONTIENE DERIVADOS DE LECHE</p>
 
-      <!-- Imagen info nutricional -->
       <img src="Protsn1.png" alt="Información nutricional" style="width: 100%; border-radius: 10px; margin-top: 20px;" />
     </div>
   </div>
 </div>
 
+<!-- Modal Producto 2 -->
+<div id="modalProtena" class="modal" style="display:none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
+  <div style="background-color: #111; margin: 60px auto; padding: 20px; border-radius: 12px; max-width: 700px; color: white; position: relative;">
+    <span onclick="cerrarModal('modalProtena')" style="color: #ffd700; position: absolute; top: 15px; right: 25px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="color: #ffd700; margin-bottom: 5px;">TrueMade Whey Protein ENA Sabor Chocolate</h2>
+    <p style="color: white; font-weight: bold; font-size: 20px; margin-top: 0; margin-bottom: 15px;">$39,799</p>
+    <img src="Protena.png" alt="TrueMade Whey Protein ENA Sabor Chocolate" style="width: 100%; border-radius: 10px; margin-bottom: 15px;" />
+    <div style="text-align: left;">
+      <p><strong>Descripción:</strong><br />
+        Sabor chocolate. Whey Protein Isolate (WPI) es la forma más pura de proteína de suero que existe actualmente. Al sumarla a nuestra fórmula clásica (WPC + WPI) elevamos el estándar de calidad, asegurándote un mejor producto en cada scoop para que logres la performance que buscas.
+        <br /><br />
+        TRUEMADE contiene un blend de máxima pureza con una rápida absorción y una excelente calidad, garantizando una efectiva y rápida recuperación del tejido muscular:
+        <ul>
+          <li><strong>Whey protein concentrate (WPC):</strong> perfil completo de aminoácidos esenciales, brindando la mejor calidad de proteínas para aumentar la energía durante el entrenamiento.</li>
+          <li><strong>Whey Protein Isolate (WPI):</strong> máxima pureza. Bajo en carbohidratos, grasas y fácil de digerir logrando una mayor absorción de la proteína.</li>
+        </ul>
+      </p>
+
+      <p><strong>Modo de uso:</strong><br />
+        Mezclar una medida de Truemade Whey Protein en 200 ml de agua o leche descremada, agitar en un shaker y tomar.
+        <br /><br />
+        Se puede tomar antes o después del entrenamiento para potenciar la definición muscular, aumentar la energía y acelerar la recuperación. También es ideal en cualquier momento del día para consumir la proteína necesaria en tu dieta.
+      </p>
+
+      <p><strong>Ingredientes:</strong><br />
+        Proteína de suero de leche (proteína de suero concentrada & proteína de suero aislada), AROMATIZANTES, acesulfame K (127 mg/100 g para Vainilla, 150 mg/100 g para Chocolate, 100 mg/100 g para Cookie & Cream, 110 mg/100 g para Frutilla, 90 mg/100 g para Banana) (EDU), sucralosa (65 mg/100 g para Vainilla, 80 mg/100 g para Chocolate, 95 mg/100 g para Cookie & Cream, 60 mg/100 g para Frutilla, 80 mg/100 g para Banana) (EDU).
+        <br /><br />
+        CONTIENE DERIVADOS DE LECHE Y SOJA. *Contiene azúcares propios de los ingredientes.
+      </p>
+
+      <img src="Protena1.png" alt="Información nutricional" style="width: 100%; border-radius: 10px; margin-top: 20px;" />
+    </div>
+  </div>
+</div>
 
 <script>
   function abrirModal(id) {
