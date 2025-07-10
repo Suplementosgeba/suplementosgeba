@@ -197,7 +197,13 @@
   <h3 style="color: #ffd700; margin: 10px 0 4px; font-size: 18px;">Creatina Star Nutrition Pote 300g</h3>
   <p style="color: white; font-weight: bold; font-size: 18px;">$35.650</p>
 </div>
- 
+
+    <!-- Producto 4 -->
+<div style="width: 220px; cursor: pointer; text-align: center;" onclick="abrirModal('modalIronBar')">
+  <img src="ironbar.png" alt="Iron Bar Gentech x 20 unidades" style="width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 0 8px #ffd700;" />
+  <h3 style="color: #ffd700; margin: 10px 0 4px; font-size: 18px;">Iron Bar Gentech x 20 unidades</h3>
+  <p style="color: white; font-weight: bold; font-size: 18px;">$27,999</p>
+</div>
 
   </div>
 </section>
@@ -304,6 +310,41 @@
   </div>
 </div>
 
+<!-- Modal Producto 4 -->
+<div id="modalIronBar" class="modal" style="display:none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
+  <div style="background-color: #111; margin: 60px auto; padding: 20px; border-radius: 12px; max-width: 700px; color: white; position: relative;">
+    <span onclick="cerrarModal('modalIronBar')" style="color: #ffd700; position: absolute; top: 15px; right: 25px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    
+    <!-- Título y precio -->
+    <h2 style="color: #ffd700; margin-bottom: 5px;">Iron Bar Gentech x 20 unidades</h2>
+    <p style="color: white; font-weight: bold; font-size: 20px; margin-top: 0; margin-bottom: 15px;">$27,999</p>
+
+    <!-- Imagen principal -->
+    <img src="ironbar.png" alt="Iron Bar Gentech" style="width: 100%; border-radius: 10px; margin-bottom: 15px;" />
+
+    <!-- Contenido -->
+    <div style="text-align: left;">
+      <p><strong>Sabores:</strong> chocolate, coco, cookies. ¡Combiná las 20 unidades como quieras!</p>
+      
+      <p><strong>Descripción:</strong><br />
+      Barra proteica a base de proteínas de suero lácteo e hidratos de carbono, con alta concentración de aminoácidos. La barra proteica Iron Bar de Gentech, te ayuda con tu desempeño y crecimiento muscular durante el entrenamiento. Las Iron Bar promueven la recuperación muscular y la resistencia, ideales para respaldar tu ejercicio y desarrollo.<br /><br />
+      El Suplemento Ideal para Ganar Masa Muscular y Recuperar Fuerza.<br /><br />
+      La Iron Bar de Gentech es una barra nutricional con un importante aporte de proteínas de suero lácteo e hidratos de carbono, las primeras con alta concentración de aminoácidos ramificados y los últimos como fuente de energía para los músculos. Formuladas para personas activas que buscan mantener o aumentar su masa muscular, recuperarse después del ejercicio o simplemente obtener un impulso energético durante el día.</p>
+
+      <p><strong>Modo de consumo:</strong><br />
+      Consumir una barra protéica diaria (46 grs).</p>
+
+      <p><strong>Ingredientes:</strong><br />
+      CONCENTRADO DE PROTEINA DE LECHE, JARABE DE SORBITOL, BAÑO DE REPOSTERIA AROMATIZADO CON ETILVAINILLA: (AZUCAR, GRASA VEGETAL, CACAO EN POLVO, EMULSIONANTES: (INS 492, INS 322, INS 476), AROMATIZANT: ETILVAINILLA), AISLADO DE PROTEINA DE SOJA, JARABE DE ISOMALTO-OLOGOSACÁRIDOS, ACEITE VEGETAL DE SOJA INTERESTERIFICADO, JARABE DE AZÚCAR INVERTIDO, JARABE DE GLUCOSA, CARBONATO DE CALCIO, DEXTROSA, CACAO EN POLVO, SULFATO DE HIERRO, COL: (INS 150 a), ARO.</p>
+
+      <p><strong>Contiene:</strong> DERIVADOS DE LECHE Y SOJA, PUEDE CONTENER DERIVADO DE HUEVOS Y MANI.</p>
+
+      <!-- Imagen info nutricional -->
+      <img src="Ironbar1.png" alt="Información nutricional Iron Bar Gentech" style="width: 100%; border-radius: 10px; margin-top: 20px;" />
+    </div>
+  </div>
+</div>
+  
 <script>
   function abrirModal(id) {
     document.getElementById(id).style.display = 'block';
